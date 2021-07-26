@@ -1,38 +1,99 @@
+header {
+    width: 100%;
+    display: block;
+    background-color: black;
+    color: aquamarine;
+    padding: 20px;
+    font-size: 1.6em;
+    margin: 0;
+}
+
 .App {
-  text-align: center;
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.history button {
+    display: block;
+    border: 1px solid #ccc;
+    width: 70%;
+    border-left: none;
+    border-right: none;
+    background-color: aquamarine;
+    margin: auto;
+    margin-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button:hover {
+    background-color: black;
+    color: aquamarine;
+    cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.square {
+    margin: 0;
+    width: 80%;
 }
 
-.App-link {
-  color: #61dafb;
+.board {
+    width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ol,
+ul {
+    padding-left: 30px;
+}
+
+.board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.status {
+    margin-bottom: 10px;
+}
+
+.square {
+    background: #fff;
+    border: 2px solid #999;
+    float: left;
+    font-size: 44px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 120px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 30%;
+}
+
+.square:focus {
+    outline: none;
+}
+
+.kbd-navigation .square:focus {
+    background: #ddd;
+}
+
+.game {
+    display: flex;
+    flex-direction: row;
+}
+
+.game-info {
+    margin-left: 20px;
+}
+
+.history {
+    background-color: rgb(241, 248, 244);
+    min-height: 600px;
+    border-left: 1px solid black;
+}
+
+.board {
+    padding: 20px;
 }
